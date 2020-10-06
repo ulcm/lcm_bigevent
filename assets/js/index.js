@@ -20,7 +20,6 @@ function getuser() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success: function (res) {
-            console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败');
             }
@@ -38,7 +37,6 @@ function getuser() {
 }
 
 function usexuan(use) {
-    console.log(use);
     var name = use.nickname || use.username
     $('.wel').html('欢迎&nbsp;&nbsp;' + name)
     if (use.user_pic !== null) {
